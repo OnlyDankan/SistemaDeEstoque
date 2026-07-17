@@ -52,6 +52,10 @@ namespace Desafios
                 case 4:
                     produtoService.EntradaProduto();
                 break;
+
+                case 5:
+                    produtoService.SaidaProduto();
+                break;
                 
                 case 0:
                     executando = false;
@@ -60,7 +64,7 @@ namespace Desafios
 
                 default:
                     Console.WriteLine("Opção inválida.");
-                break;
+                break; 
             }
 
             if (executando)

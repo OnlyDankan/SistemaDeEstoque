@@ -258,13 +258,42 @@ namespace Desafios.Services {
             Console.WriteLine($"Quantidade anterior: {produtoEncontrado.Quantidade}");
             Console.WriteLine($"Entraram: {unidades}");
             Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
-
-           
-            
-
-
         }
        
+
+       public void SaidaProduto ()
+        {
+            Console.Clear();
+
+            Console.WriteLine("Digite o código do produto:");
+            int codigo = int.Parse(Console.ReadLine() ?? "");
+
+            Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == codigo);
+
+            if (produtoEncontrado == null)
+            {
+                Console.WriteLine("Produto não encontrado.");
+                return;
+            }
+
+            Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
+            Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
+
+            Console.WriteLine($"Quantas unidades saíram?");
+            int unidades = int.Parse(Console.ReadLine() ?? "");
+
+            produtoEncontrado.Quantidade -= unidades;
+
+            Console.Clear();
+
+            Console.WriteLine("Saída registrada com sucesso!");
+            Console.WriteLine($"Quantidade anterior: {produtoEncontrado.Quantidade}");
+            Console.WriteLine($"Saíram: {unidades}");
+            Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
+
+            
+
+        }
 
 
         }
