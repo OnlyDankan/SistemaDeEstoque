@@ -98,7 +98,7 @@ namespace Desafios.Services {
             {
                 Console.WriteLine($"Nome: {produto.Nome}");
                 Console.WriteLine($"Codigo: {produto.Codigo}");
-                Console.WriteLine($"Preço: R$ {produto.Preco}");
+                Console.WriteLine($"Preço: R$: {produto.Preco}");
                 Console.WriteLine($"Quantidade: {produto.Quantidade}");
                 Console.WriteLine($"Categoria: {produto.Categoria}");
 
@@ -126,7 +126,7 @@ namespace Desafios.Services {
             Console.WriteLine("\n=== PRODUTO ENCONTRADO ===");
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
             Console.WriteLine($"Código: {produtoEncontrado.Codigo}");
-            Console.WriteLine($"Preço: R$ {produtoEncontrado.Preco}");
+            Console.WriteLine($"Preço: R$: {produtoEncontrado.Preco}");
             Console.WriteLine($"Quantidade: {produtoEncontrado.Quantidade}");
             Console.WriteLine($"Categoria: {produtoEncontrado.Categoria}");
 
