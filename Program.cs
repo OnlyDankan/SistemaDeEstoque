@@ -28,6 +28,7 @@ namespace Desafios
             Console.WriteLine("5 - Saída de estoque");
             Console.WriteLine("6 - Relatórios");
             Console.WriteLine("0 - Sair");
+            Console.Write("Escolha uma opção: ");
             int menuOpcao = int.Parse(Console.ReadLine() ?? "");
 
             
