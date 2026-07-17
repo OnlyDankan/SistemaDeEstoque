@@ -1,0 +1,14 @@
+/Users/daniel/Desafios/bin/Debug/net10.0/Desafios
+/Users/daniel/Desafios/bin/Debug/net10.0/Desafios.deps.json
+/Users/daniel/Desafios/bin/Debug/net10.0/Desafios.runtimeconfig.json
+/Users/daniel/Desafios/bin/Debug/net10.0/Desafios.dll
+/Users/daniel/Desafios/bin/Debug/net10.0/Desafios.pdb
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.GeneratedMSBuildEditorConfig.editorconfig
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.AssemblyInfoInputs.cache
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.AssemblyInfo.cs
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.csproj.CoreCompileInputs.cache
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.dll
+/Users/daniel/Desafios/obj/Debug/net10.0/refint/Desafios.dll
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.pdb
+/Users/daniel/Desafios/obj/Debug/net10.0/Desafios.genruntimeconfig.cache
+/Users/daniel/Desafios/obj/Debug/net10.0/ref/Desafios.dll
