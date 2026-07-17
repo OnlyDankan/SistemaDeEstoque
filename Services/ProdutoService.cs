@@ -98,7 +98,7 @@ namespace Desafios.Services {
             {
                 Console.WriteLine($"Nome: {produto.Nome}");
                 Console.WriteLine($"Codigo: {produto.Codigo}");
-                Console.WriteLine($"Preço: R${produto.Preco}");
+                Console.WriteLine($"Preço: R$ {produto.Preco}");
                 Console.WriteLine($"Quantidade: {produto.Quantidade}");
                 Console.WriteLine($"Categoria: {produto.Categoria}");
 
@@ -248,14 +248,15 @@ namespace Desafios.Services {
             int unidades = int.Parse(Console.ReadLine() ?? "");
 
             
-             int novaQuantidade = produtoEncontrado.Quantidade + unidades;
+            produtoEncontrado.Quantidade += unidades;
+           
 
             Console.Clear();
 
             Console.WriteLine("Entrada registrada com sucesso!");
             Console.WriteLine($"Quantidade anterior: {produtoEncontrado.Quantidade}");
             Console.WriteLine($"Entraram: {unidades}");
-            Console.WriteLine($"Nova quantidade: {novaQuantidade}");
+            Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
 
            
             
