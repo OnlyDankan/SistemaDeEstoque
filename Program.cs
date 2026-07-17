@@ -20,8 +20,8 @@ namespace Desafios
                 Console.Clear();
 
             Console.WriteLine("Sistema de Estoque");
-            Console.WriteLine();
-            Console.WriteLine("1 - Cadastrar Produto");
+            
+            Console.WriteLine("\n1 - Cadastrar Produto");
             Console.WriteLine("2 - Listar Produtos");
             Console.WriteLine("3 - Buscar Produto");
             Console.WriteLine("4 - Entrada de estoque");
