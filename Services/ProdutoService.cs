@@ -248,6 +248,11 @@ namespace Desafios.Services {
             Console.WriteLine("\nQuantas unidades entraram?");
             int unidades = int.Parse(Console.ReadLine() ?? "");
 
+            if (unidades < 0)
+            {
+                throw new ArgumentException("Número inválido. Tente novamente");
+            }
+
             
             produtoEncontrado.Quantidade += unidades;
            
@@ -265,7 +270,7 @@ namespace Desafios.Services {
         {
             Console.Clear();
 
-            Console.WriteLine("Digite o código do produto:");
+            Console.Write("Digite o código do produto:");
             int codigo = int.Parse(Console.ReadLine() ?? "");
 
             Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == codigo);
@@ -279,7 +284,7 @@ namespace Desafios.Services {
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
             Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
 
-            Console.WriteLine($"Quantas unidades saíram?");
+            Console.WriteLine($"\nQuantas unidades saíram?");
             int unidades = int.Parse(Console.ReadLine() ?? "");
 
             produtoEncontrado.Quantidade -= unidades;
@@ -291,7 +296,7 @@ namespace Desafios.Services {
             Console.WriteLine($"Saíram: {unidades}");
             Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
 
-            
+
 
         }
 
