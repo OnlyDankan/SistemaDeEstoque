@@ -30,7 +30,12 @@ namespace Desafios.Services {
 
         Console.Write("Código: ");
         int codigo = int.Parse(Console.ReadLine() ?? "");
-
+        Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == codigo);
+        
+        if (produtoEncontrado != null)
+        {
+            Console.WriteLine("ERRO: Já existe um produto com esse código.");
+        }
 
         if (int.IsNegative(codigo))
             {
@@ -132,6 +137,7 @@ namespace Desafios.Services {
 
             Console.WriteLine("\n1 - Atualizar produto.");
             Console.WriteLine("2 - Excluir produto.");
+            Console.WriteLine("0 - Voltar");
             
 
             if (int.TryParse(Console.ReadLine(), out int opcao))
@@ -299,6 +305,8 @@ namespace Desafios.Services {
 
 
         }
+
+        
 
 
         }
