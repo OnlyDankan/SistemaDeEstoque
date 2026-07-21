@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/daniel/Desafios/Desafios.csproj",
+      "projectUniqueName": "/Users/daniel/Documents/GitHub/SistemaDeEstoque/Desafios.csproj",
       "projectName": "Desafios",
-      "projectPath": "/Users/daniel/Desafios/Desafios.csproj",
+      "projectPath": "/Users/daniel/Documents/GitHub/SistemaDeEstoque/Desafios.csproj",
       "packagesPath": "/Users/daniel/.nuget/packages/",
-      "outputPath": "/Users/daniel/Desafios/obj/",
+      "outputPath": "/Users/daniel/Documents/GitHub/SistemaDeEstoque/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/daniel/.nuget/NuGet/NuGet.Config"
