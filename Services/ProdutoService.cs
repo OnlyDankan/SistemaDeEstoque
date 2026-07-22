@@ -194,6 +194,12 @@ namespace Desafios.Services {
                 case 2:
                     Console.WriteLine("Novo código: ");
                     produto.Codigo = int.Parse(Console.ReadLine() ?? "");
+                    Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == produto.Codigo);
+
+                    if (produtoEncontrado != null)
+                    {
+                        throw new ArgumentException("Código já existente. Tente novamente.");
+                    }
                 break;
 
                 case 3:
