@@ -182,6 +182,8 @@ namespace Desafios.Services {
             Console.WriteLine("4 - Quantidade");
             Console.WriteLine("5 - Categoria");
 
+            while (true) {
+                try{
             int opcao = int.Parse(Console.ReadLine() ?? "");
 
             switch (opcao)
@@ -189,6 +191,8 @@ namespace Desafios.Services {
                 case 1:
                     Console.WriteLine("Novo nome: ");
                     produto.Nome = Console.ReadLine() ?? "";
+                    Produto? produtoEncontrados = produtos.FirstOrDefault(p => p.Nome == produto.Nome);
+
                 break;
                 
                 case 2:
@@ -199,6 +203,7 @@ namespace Desafios.Services {
                     if (produtoEncontrado != null)
                     {
                         throw new ArgumentException("Código já existente. Tente novamente.");
+
                     }
                 break;
 
@@ -219,6 +224,14 @@ namespace Desafios.Services {
             }
 
             Console.WriteLine("Produto atualizado com sucesso!");
+            break;
+                } catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine();
+                    
+                }
+            }
         }
 
 
