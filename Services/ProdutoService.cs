@@ -20,8 +20,12 @@ namespace Desafios.Services {
         Console.WriteLine("Cadastro de Produto");
         Console.Write("Nome: ");
         string nome = Console.ReadLine() ?? "";
+        Produto? produtoEncontrados = produtos.FirstOrDefault(p => p.Nome == nome);
         
-
+        if (produtoEncontrados != null)
+            {
+                throw new ArgumentException("Este nome já existe. Tente novamente.");
+            }
 
         if (string.IsNullOrWhiteSpace(nome))
              {
