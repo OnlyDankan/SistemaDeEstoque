@@ -20,6 +20,7 @@ namespace Desafios.Services {
         Console.WriteLine("Cadastro de Produto");
         Console.Write("Nome: ");
         string nome = Console.ReadLine() ?? "";
+        
 
 
         if (string.IsNullOrWhiteSpace(nome))
@@ -34,7 +35,7 @@ namespace Desafios.Services {
         
         if (produtoEncontrado != null)
         {
-            Console.WriteLine("ERRO: Já existe um produto com esse código.");
+            throw new ArgumentException("ERRO: Já existe um produto com esse código.");
         }
 
         if (int.IsNegative(codigo))
