@@ -182,7 +182,7 @@ namespace Desafios.Services {
             Console.WriteLine("4 - Quantidade");
             Console.WriteLine("5 - Categoria");
 
-            while (true) {
+            while (true) { //ARRUMAR ESSE WHILE E COLOCAR ELE EM CIMA DO MENU ACIMA
                 try{
             int opcao = int.Parse(Console.ReadLine() ?? "");
 
@@ -197,7 +197,6 @@ namespace Desafios.Services {
                             {
                                 throw new ArgumentException("Este nome já existe. Tente novamente");
                             } 
-
                 break;
                 
                 case 2:
