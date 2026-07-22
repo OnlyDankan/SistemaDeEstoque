@@ -193,6 +193,11 @@ namespace Desafios.Services {
                     produto.Nome = Console.ReadLine() ?? "";
                     Produto? produtoEncontrados = produtos.FirstOrDefault(p => p.Nome == produto.Nome);
 
+                    if (produtoEncontrados != null)
+                            {
+                                throw new ArgumentException("Este nome já existe. Tente novamente");
+                            } 
+
                 break;
                 
                 case 2:
