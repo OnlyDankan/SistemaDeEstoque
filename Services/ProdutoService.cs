@@ -174,7 +174,9 @@ namespace Desafios.Services {
         {
             Console.Clear();
 
+            while (true) {
 
+                try{
             Console.WriteLine("O que deseja alterar?");
             Console.WriteLine("1 - Nome");
             Console.WriteLine("2 - Código");
@@ -182,8 +184,8 @@ namespace Desafios.Services {
             Console.WriteLine("4 - Quantidade");
             Console.WriteLine("5 - Categoria");
 
-            while (true) { //ARRUMAR ESSE WHILE E COLOCAR ELE EM CIMA DO MENU ACIMA
-                try{
+             //ARRUMAR ESSE WHILE E COLOCAR ELE EM CIMA DO MENU ACIMA
+                
             int opcao = int.Parse(Console.ReadLine() ?? "");
 
             switch (opcao)
