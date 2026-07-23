@@ -178,58 +178,58 @@ namespace Desafios.Services {
 
                 try{
             Console.WriteLine("O que deseja alterar?");
-            Console.WriteLine("1 - Nome");
+            Console.WriteLine("\n1 - Nome");
             Console.WriteLine("2 - Código");
             Console.WriteLine("3 - Preço");;
             Console.WriteLine("4 - Quantidade");
             Console.WriteLine("5 - Categoria");
 
-             //ARRUMAR ESSE WHILE E COLOCAR ELE EM CIMA DO MENU ACIMA
+            
                 
             int opcao = int.Parse(Console.ReadLine() ?? "");
 
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine("Novo nome: ");
+                    Console.Write("\nNovo nome: ");
                     produto.Nome = Console.ReadLine() ?? "";
                     Produto? produtoEncontrados = produtos.FirstOrDefault(p => p.Nome == produto.Nome);
 
                     if (produtoEncontrados != null)
                             {
-                                throw new ArgumentException("Este nome já existe. Tente novamente");
+                                throw new ArgumentException("\nEste nome já existe. Tente novamente");
                             } 
                 break;
                 
                 case 2:
-                    Console.WriteLine("Novo código: ");
+                    Console.Write("\nNovo código: ");
                     produto.Codigo = int.Parse(Console.ReadLine() ?? "");
                     Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == produto.Codigo);
 
                     if (produtoEncontrado != null)
                     {
-                        throw new ArgumentException("Código já existente. Tente novamente.");
+                        throw new ArgumentException("\nCódigo já existente. Tente novamente.");
 
                     }
                 break;
 
                 case 3:
-                    Console.Write("Novo preço: ");
+                    Console.Write("\nNovo preço: ");
                     produto.Preco = double.Parse(Console.ReadLine() ?? "");
                 break;
 
                 case 4:
-                    Console.WriteLine("Nova quantidade: ");
+                    Console.Write("\nNova quantidade: ");
                     produto.Quantidade = int.Parse(Console.ReadLine() ?? "");
                 break;
 
                 case 5:
-                    Console.WriteLine("Nova categoria: ");
+                    Console.Write("\nNova categoria: ");
                     produto.Categoria = Console.ReadLine() ?? "";
                 break;
             }
 
-            Console.WriteLine("Produto atualizado com sucesso!");
+            Console.WriteLine("\nProduto atualizado com sucesso!");
             break;
                 } catch (Exception ex)
                 {
