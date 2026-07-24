@@ -183,22 +183,26 @@ namespace Desafios.Services {
             Console.WriteLine("3 - Preço");;
             Console.WriteLine("4 - Quantidade");
             Console.WriteLine("5 - Categoria");
-
             
-                
+            
             int opcao = int.Parse(Console.ReadLine() ?? "");
 
             switch (opcao)
             {
                 case 1:
                     Console.Write("\nNovo nome: ");
-                    produto.Nome = Console.ReadLine() ?? "";
-                    Produto? produtoEncontrados = produtos.FirstOrDefault(p => p.Nome == produto.Nome);
+                 
+                    string novoNome = Console.ReadLine() ?? "";
 
-                    if (produtoEncontrados != null)
+                    bool nomeExiste = produtos.Any(p => p.Nome == novoNome && p != produto);
+                    
+
+                    if (nomeExiste)
                             {
                                 throw new ArgumentException("\nEste nome já existe. Tente novamente");
                             } 
+
+                    produto.Nome = novoNome;        
                 break;
                 
                 case 2:
