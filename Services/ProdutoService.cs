@@ -191,7 +191,6 @@ namespace Desafios.Services {
             {
                 case 1:
                     Console.Write("\nNovo nome: ");
-                 
                     string novoNome = Console.ReadLine() ?? "";
 
                     bool nomeExiste = produtos.Any(p => p.Nome == novoNome && p != produto);
@@ -208,6 +207,7 @@ namespace Desafios.Services {
                 case 2:
                     Console.Write("\nNovo código: ");
                     int novoCodigo = int.Parse(Console.ReadLine() ?? "");
+
                     bool codigoExiste = produtos.Any(p => p.Codigo == novoCodigo  && p != produto);
 
 
@@ -285,8 +285,7 @@ namespace Desafios.Services {
                 return;
             }
 
-            Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
-            Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
+            
 
             Console.WriteLine("\nQuantas unidades entraram?");
             int unidades = int.Parse(Console.ReadLine() ?? "");
@@ -296,8 +295,11 @@ namespace Desafios.Services {
                 throw new ArgumentException("Número inválido. Tente novamente");
             }
 
-            
+            int quantidadeAnterior = produtoEncontrado.Quantidade;
             produtoEncontrado.Quantidade += unidades;
+
+            Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
+            Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
            
 
             Console.Clear();
