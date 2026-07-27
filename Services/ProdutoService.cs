@@ -286,7 +286,12 @@ namespace Desafios.Services {
                     produto.Categoria = novaCategoria;
 
                 break;
+
+                default:
+                    throw new ArgumentException("Opção inválida");
+                break;
             }
+            
 
             Console.WriteLine("\nProduto atualizado com sucesso!");
             break;

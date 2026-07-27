@@ -31,6 +31,12 @@ namespace Desafios
             Console.Write("Escolha uma opção: ");
             int menuOpcao = int.Parse(Console.ReadLine() ?? "");
 
+            if (!int.TryParse(Console.ReadLine(), out int opcao))
+                {
+                    Console.WriteLine("Digite uma opção válida");
+                    continue;
+                }
+
             
 
             Console.Clear();
