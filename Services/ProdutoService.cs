@@ -288,8 +288,7 @@ namespace Desafios.Services {
                 break;
 
                 default:
-                    throw new ArgumentException("Opção inválida");
-                break;
+                    throw new ArgumentException("Opção inválida. Tente novamente");
             }
             
 
