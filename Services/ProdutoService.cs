@@ -265,13 +265,14 @@ namespace Desafios.Services {
                         throw new ArgumentException("Digite uma quantidade válida");
                     }
 
-                    if (novaQuantidade <0)
+                    if (novaQuantidade < 0)
                     {
                         throw new ArgumentException("A quantidade não pode ser negativa"); 
                     }
 
                     produto.Quantidade = novaQuantidade;
                 break;
+
 
                 case 5:
                     Console.Write("\nNova categoria: ");
@@ -283,10 +284,6 @@ namespace Desafios.Services {
                     }
 
                     produto.Categoria = novaCategoria;
-
-
-                   
-
 
                 break;
             }
@@ -398,7 +395,6 @@ namespace Desafios.Services {
                 throw new ArgumentException("Quantidade insuficiente em estoque.");
             }
 
-            
 
             Console.Clear();
 
