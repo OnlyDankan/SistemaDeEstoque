@@ -231,7 +231,22 @@ namespace Desafios.Services {
                     Console.Write("\nNovo preço: ");
                     string entradaPreco = Console.ReadLine() ?? "";
 
+                    if(string.IsNullOrWhiteSpace(entradaPreco))
+                    {
+                       throw new ArgumentException("O preço não pode ficar vazio");
+                    }
 
+                    if (!int.TryParse(entradaPreco, out int novoPreco))
+                    {
+                        throw new ArgumentException("Digite uma quantidade válida");
+                    }
+
+                    if (novoPreco < 0)
+                    {
+                        throw new ArgumentException("O preço não pode ser negativo");  
+                    }
+
+                    produto.Preco = novoPreco;
 
 
                 break;
