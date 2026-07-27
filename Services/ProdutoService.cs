@@ -332,7 +332,17 @@ namespace Desafios.Services {
             Console.WriteLine($"\nQuantas unidades saíram?");
             int unidades = int.Parse(Console.ReadLine() ?? "");
 
-            produtoEncontrado.Quantidade -= unidades;
+            if (unidades < 0)
+            {
+                throw new ArgumentException("Número inválido");
+            }
+
+            if (unidades > produtoEncontrado.Quantidade)
+            {
+                throw new ArgumentException("Quantidade insuficiente em estoque.");
+            }
+
+            
 
             Console.Clear();
 
