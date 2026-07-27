@@ -193,9 +193,13 @@ namespace Desafios.Services {
                     Console.Write("\nNovo nome: ");
                     string novoNome = Console.ReadLine() ?? "";
 
+                    if (string.IsNullOrWhiteSpace(novoNome))
+                         {
+                            throw new ArgumentException("O nome não pode ser vazio");
+                         }
+
                     bool nomeExiste = produtos.Any(p => p.Nome == novoNome && p != produto);
                     
-
                     if (nomeExiste)
                             {
                                 throw new ArgumentException("\nEste nome já existe. Tente novamente");
@@ -203,11 +207,13 @@ namespace Desafios.Services {
 
                     produto.Nome = novoNome;        
                 break;
+
                 
                 case 2:
                     Console.Write("\nNovo código: ");
                     int novoCodigo = int.Parse(Console.ReadLine() ?? "");
 
+                    
                     bool codigoExiste = produtos.Any(p => p.Codigo == novoCodigo  && p != produto);
 
 
@@ -219,6 +225,7 @@ namespace Desafios.Services {
 
                     produto.Codigo = novoCodigo;
                 break;
+
 
                 case 3:
                     Console.Write("\nNovo preço: ");
@@ -232,7 +239,19 @@ namespace Desafios.Services {
 
                 case 5:
                     Console.Write("\nNova categoria: ");
-                    produto.Categoria = Console.ReadLine() ?? "";
+                    string novaCategoria = Console.ReadLine() ?? "";
+
+                    if (string.IsNullOrWhiteSpace(novaCategoria))
+                    {
+                        throw new ArgumentException("A categoria não óde ser vazia.");
+                    }
+
+                    produto.Categoria = novaCategoria;
+
+
+                   
+
+
                 break;
             }
 
