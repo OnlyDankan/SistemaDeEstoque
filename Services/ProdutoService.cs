@@ -326,6 +326,7 @@ namespace Desafios.Services {
                 return;
             }
 
+        
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
             Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
 
@@ -346,8 +347,12 @@ namespace Desafios.Services {
 
             Console.Clear();
 
+            int quantidadeAnterior = produtoEncontrado.Quantidade;
+
+            produtoEncontrado.Quantidade -= unidades;
+
             Console.WriteLine("Saída registrada com sucesso!");
-            Console.WriteLine($"Quantidade anterior: {produtoEncontrado.Quantidade}");
+            Console.WriteLine($"Quantidade anterior: {quantidadeAnterior}");
             Console.WriteLine($"Saíram: {unidades}");
             Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
 
