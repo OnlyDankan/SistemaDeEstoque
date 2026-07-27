@@ -92,10 +92,14 @@ namespace Desafios.Services {
         Console.WriteLine("Produto Cadastrado.");
         break;
         }
-         catch (Exception ex)
+         catch (ArgumentException ex)
                 {
                     Console.WriteLine(ex.Message);
-                    Console.WriteLine();
+                   
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Digite um valor válido");
                 }
       }
     }
