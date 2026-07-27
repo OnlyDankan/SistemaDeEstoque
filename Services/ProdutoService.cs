@@ -229,19 +229,23 @@ namespace Desafios.Services {
 
                 case 3:
                     Console.Write("\nNovo preço: ");
-                    produto.Preco = double.Parse(Console.ReadLine() ?? "");
+                    string entradaPreco = Console.ReadLine() ?? "";
+
+
+
+
                 break;
 
                 case 4:
                     Console.Write("\nNova quantidade: ");
-                    string entrada = Console.ReadLine() ?? "";
+                    string entradaQuantidade = Console.ReadLine() ?? "";
 
-                    if (string.IsNullOrWhiteSpace(entrada))
+                    if (string.IsNullOrWhiteSpace(entradaQuantidade))
                      {
                         throw new ArgumentException("A quantidade não pode ficar vazia");      
                      }
 
-                     if (!int.TryParse(entrada, out int novaQuantidade))
+                     if (!int.TryParse(entradaQuantidade, out int novaQuantidade))
                     {
                         throw new ArgumentException("Digite uma quantidade válida");
                     }
