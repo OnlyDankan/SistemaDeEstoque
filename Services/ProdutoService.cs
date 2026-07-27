@@ -49,10 +49,10 @@ namespace Desafios.Services {
 
 
         Console.Write("Preço: ");
-        double preco = double.Parse(Console.ReadLine() ?? "");
+        decimal preco = decimal.Parse(Console.ReadLine() ?? "");
 
 
-        if (double.IsNegative(preco))
+        if (decimal.IsNegative(preco))
             {
                 throw new Exception("Número inválido.");
             }
