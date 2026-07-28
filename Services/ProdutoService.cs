@@ -363,7 +363,6 @@ namespace Desafios.Services {
 
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
             Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
-
             
 
             Console.WriteLine("\nQuantas unidades entraram?");
@@ -373,15 +372,11 @@ namespace Desafios.Services {
             {
                 throw new ArgumentException("Número inválido. Tente novamente");
             }
+        
+            Console.Clear();
 
             int quantidadeAnterior = produtoEncontrado.Quantidade;
             produtoEncontrado.Quantidade += unidades;
-
-            Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
-            Console.WriteLine($"Quantidade atual: {produtoEncontrado.Quantidade}");
-           
-
-            Console.Clear();
 
             Console.WriteLine("Entrada registrada com sucesso!");
             Console.WriteLine($"Quantidade anterior: {produtoEncontrado.Quantidade}");
