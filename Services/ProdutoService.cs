@@ -104,6 +104,7 @@ namespace Desafios.Services {
       }
     }
 
+
         public void ListarProdutos()
         {
             Console.WriteLine("PRODUTOS CADASTRADOS");
@@ -126,6 +127,8 @@ namespace Desafios.Services {
             
             }
         }
+
+
 
         public void BuscarProdutos()
         {
@@ -179,6 +182,8 @@ namespace Desafios.Services {
                 }
             }
         }
+
+
 
             public void AtualizarProduto(Produto produto)
         {
@@ -246,7 +251,7 @@ namespace Desafios.Services {
                        throw new ArgumentException("O preço não pode ficar vazio");
                     }
 
-                    if (!int.TryParse(entradaPreco, out int novoPreco))
+                    if (!decimal.TryParse(entradaPreco, out decimal novoPreco))
                     {
                         throw new ArgumentException("Digite uma quantidade válida");
                     }
@@ -316,6 +321,7 @@ namespace Desafios.Services {
         }
 
 
+
             //DEIXANDO ESSA PARTE COMENTADA PQ EU VOU USAR DEPOIS, ALGUMA HORA EU VOU :)
             /*public void RemoverProduto (Produto produto)
         {
@@ -337,6 +343,8 @@ namespace Desafios.Services {
                 return;
             }
         }*/
+
+
 
         public void EntradaProduto ()
         {
@@ -378,6 +386,8 @@ namespace Desafios.Services {
             Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
         }
        
+
+
 
        public void SaidaProduto ()
         {
