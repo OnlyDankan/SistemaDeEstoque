@@ -49,10 +49,10 @@ namespace Desafios.Services {
 
 
         Console.Write("Preço: ");
-        decimal preco = decimal.Parse(Console.ReadLine() ?? "");
+        double preco = double.Parse(Console.ReadLine() ?? "");
 
 
-        if (decimal.IsNegative(preco))
+        if (double.IsNegative(preco))
             {
                 throw new Exception("Número inválido.");
             }
@@ -251,7 +251,7 @@ namespace Desafios.Services {
                        throw new ArgumentException("O preço não pode ficar vazio");
                     }
 
-                    if (!decimal.TryParse(entradaPreco, out decimal novoPreco))
+                    if (!double.TryParse(entradaPreco, out double novoPreco))
                     {
                         throw new ArgumentException("Digite uma quantidade válida");
                     }
