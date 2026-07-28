@@ -31,11 +31,12 @@ namespace Desafios
             Console.Write("Escolha uma opção: ");
             int menuOpcao = int.Parse(Console.ReadLine() ?? "");
 
-            if (!int.TryParse(Console.ReadLine(), out int opcao))
+            //por algum motivo isso aqui ta fazendo com que o user confirme duas vezes a opção que ele quer, vou dar uma olhada oque está causando isso.
+            /*if (!int.TryParse(Console.ReadLine(), out int opcao))
                 {
                     Console.WriteLine("Digite uma opção válida");
                     continue;
-                }
+                }*/
 
             
 
