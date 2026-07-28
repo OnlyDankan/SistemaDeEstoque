@@ -117,6 +117,12 @@ namespace Desafios.Services {
                 Console.WriteLine($"Categoria: {produto.Categoria}");
 
                 Console.WriteLine();
+
+                if (!produtos.Any())
+                {
+                    Console.WriteLine("Nenhum produto cadastrado.");
+                    return;
+                }
             
             }
         }
