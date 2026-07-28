@@ -379,7 +379,7 @@ namespace Desafios.Services {
             produtoEncontrado.Quantidade += unidades;
 
             Console.WriteLine("Entrada registrada com sucesso!");
-            Console.WriteLine($"Quantidade anterior: {produtoEncontrado.Quantidade}");
+            Console.WriteLine($"Quantidade anterior: {quantidadeAnterior}");
             Console.WriteLine($"Entraram: {unidades}");
             Console.WriteLine($"Nova quantidade: {produtoEncontrado.Quantidade}");
         }
