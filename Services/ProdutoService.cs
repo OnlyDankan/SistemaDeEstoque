@@ -392,8 +392,7 @@ namespace Desafios.Services {
             Console.Clear();
 
             Console.Write("Digite o código do produto:");
-            int codigo = int.Parse(Console.ReadLine() ?? "");
-
+            int codigo = int.Parse(Console.ReadLine() ?? ""); ; 
             Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == codigo);
 
             if (produtoEncontrado == null)
