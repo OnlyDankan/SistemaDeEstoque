@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using Desafios.Models;
 using System.Linq;
+using System.Data;
 
 
 namespace Desafios.Services {
@@ -393,7 +394,7 @@ namespace Desafios.Services {
 
             Console.Write("Digite o código do produto:");
             int codigo = int.Parse(Console.ReadLine() ?? ""); 
-            Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == codigo);
+            Produto? produtoEncontrado = produtos.FirstOrDefault(p => p.Codigo == codigo); 
 
             if (produtoEncontrado == null)
             {
@@ -408,10 +409,13 @@ namespace Desafios.Services {
             Console.WriteLine($"\nQuantas unidades saíram?");
             int unidades = int.Parse(Console.ReadLine() ?? "");
 
-            if (unidades < 0)
+            if(int.IsNegative(unidades))
             {
-                throw new ArgumentException("Número inválido");
+               Console.WriteLine("O número é inválido. Tente novamente.");
+                return;
             }
+
+           
 
             if (unidades > produtoEncontrado.Quantidade)
             {
