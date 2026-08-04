@@ -126,7 +126,7 @@ namespace Desafios.Services {
                     return;
                 }
             
-            }
+            } //Sabrina Carpenter<3
         }
 
 
@@ -164,7 +164,7 @@ namespace Desafios.Services {
                 switch (opcao)
                 {
                     case 1:
-                        AtualizarProduto(produtoEncontrado);
+                       AtualizarProduto(produtoEncontrado); 
                     break;
 
                     case 2:
